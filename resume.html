@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Official Resume Generator</title>
+    <link rel="stylesheet" href="resume.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+    <h1>Resume Generator</h1>
+    <form id="resume-form">
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            
+            <label for="title">Title:</label>
+            <input type="text" id="title" placeholder="E.g., Software Developer" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Skills</legend>
+            <label for="skills">Skills (comma-separated):</label>
+            <input type="text" id="skills" placeholder="E.g., JavaScript, Python, SQL">
+        </fieldset>
+
+        <fieldset>
+            <legend>Projects</legend>
+            <label for="projects">Projects:</label>
+            <textarea id="projects" placeholder="List your projects..."></textarea>
+        </fieldset>
+
+        <fieldset>
+            <legend>Work Experience</legend>
+            <textarea id="experience" placeholder="Describe your work experience..."></textarea>
+        </fieldset>
+
+        <button type="button" onclick="generateResume()">Generate Resume</button>
+    </form>
+
+    <div id="resume-output" class="resume-output">
+        <h2>Your Generated Resume:</h2>
+        <!-- Generated resume will appear here -->
+    </div>
+    <script src="resume.js"></script>
+</body>
+</html>
